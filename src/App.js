@@ -1,6 +1,10 @@
 import React from "react";
 import "./styles.css";
 
+var bookList = {
+  Fiction: ["Harry Potter", "A song of Ice and Fire"],
+  Productivity: ["Atomic Habits"]
+};
 export default function App() {
   return (
     <div className="App">
