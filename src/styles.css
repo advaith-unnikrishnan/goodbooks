@@ -7,5 +7,25 @@
   max-width: 500px;
   margin: 1rem;
   border-radius: 5rem;
-  box-shadow: 0.75rem 0.5rem;
+  box-shadow: 0.5rem 0.5rem #48426d;
+}
+
+.genre-list {
+  max-width: 500px;
+  list-style: none;
+  margin: auto;
+}
+
+.genre-name {
+  display: inline;
+  padding: 0.5rem;
+  margin: 1rem;
+  color: #48426d;
+  border: 1.5px solid #48426d;
+  border-radius: 1rem;
+}
+
+.genre-name:hover {
+  background-color: #48426d;
+  color: white;
 }

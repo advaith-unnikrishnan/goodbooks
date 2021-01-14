@@ -41,6 +41,8 @@ const bookshelf = {
 };
 
 export default function App() {
+  var genres = Object.keys(bookshelf);
+  console.log(genres);
   return (
     <div className="App">
       <header>
@@ -54,6 +56,13 @@ export default function App() {
           Do you love books? Want to get new recommendations from different
           genres? Then try it out
         </p>
+        <ul className="genre-list">
+          {genres.map((item) => {
+            return <li className="genre-name">{item}</li>;
+          })}
+        </ul>
+
+        <div></div>
       </header>
     </div>
   );
