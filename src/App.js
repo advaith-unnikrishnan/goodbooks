@@ -1,6 +1,8 @@
 import React from "react";
 import "./styles.css";
 
+const bookshrlf = {};
+
 export default function App() {
   return (
     <div className="App">
@@ -13,7 +15,7 @@ export default function App() {
         <h1>Goodbooks</h1>
         <p>
           Do you love books? Want to get new recommendations from different
-          jonures? Then try it out
+          genres? Then try it out
         </p>
       </header>
     </div>
