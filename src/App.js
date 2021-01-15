@@ -88,31 +88,11 @@ export default function App() {
         })}
       </ul>
 
-      {/* <ul style={{ paddingInlineStart: "0" }}>
-          {bookshelf[genre].map((book) => (
-            <li
-              key={book.name}
-              style={{
-                listStyle: "none",
-                padding: "1rem",
-                border: "1px solid #D1D5DB",
-                width: "70%",
-                margin: "1rem 0rem",
-                borderRadius: "0.5rem"
-              }}
-            >
-              {" "}
-              <div style={{ fontSize: "larger" }}> {book.name} </div>
-              <div style={{ fontSize: "smaller" }}> {book.rating} </div>
-            </li>
-          ))}
-        </ul> */}
-
-      <div className="book-list">
-        <ul>
+      <div>
+        <ul className="book-list">
           {bookshelf[genre].map((book) => (
             <li key={book.name}>
-              <div>
+              <div className="book-description">
                 <h3>{book.name}</h3>
                 <small>{book.author}</small>
                 <h4>{book.rating}</h4>

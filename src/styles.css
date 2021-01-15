@@ -29,3 +29,19 @@
   background-color: #48426d;
   color: white;
 }
+
+.book-list {
+  padding: 1rem;
+  list-style: none;
+  max-width: 400px;
+  margin: auto;
+}
+
+.book-description {
+  background-color: #f1aa9b;
+  margin: 1rem;
+  padding: 1rem;
+  border: 1.5px solid #48426d;
+  border-radius: 2rem;
+  text-align: justify;
+}
