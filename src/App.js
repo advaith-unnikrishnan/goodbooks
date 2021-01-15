@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styles.css";
 
 const bookshelf = {
@@ -39,10 +39,14 @@ const bookshelf = {
     }
   ]
 };
-
 export default function App() {
   var genres = Object.keys(bookshelf);
-  console.log(genres);
+  const [genre, setGenre] = useState("Fantasy");
+
+  function genreClickHandler(item) {
+    setGenre(item);
+  }
+
   return (
     <div className="App">
       <header>
@@ -56,14 +60,49 @@ export default function App() {
           Do you love books? Want to get new recommendations from different
           genres? Then try it out
         </p>
-        <ul className="genre-list">
-          {genres.map((item) => {
-            return <li className="genre-name">{item}</li>;
-          })}
-        </ul>
-
-        <div></div>
       </header>
+
+      <ul className="genre-list">
+        {genres.map((item) => {
+          return (
+            <li
+              className="genre-name"
+              key={item}
+              onClick={() => genreClickHandler(item)}
+            >
+              {item}
+            </li>
+          );
+        })}
+      </ul>
+
+      {/* <ul style={{ paddingInlineStart: "0" }}>
+          {bookshelf[genre].map((book) => (
+            <li
+              key={book.name}
+              style={{
+                listStyle: "none",
+                padding: "1rem",
+                border: "1px solid #D1D5DB",
+                width: "70%",
+                margin: "1rem 0rem",
+                borderRadius: "0.5rem"
+              }}
+            >
+              {" "}
+              <div style={{ fontSize: "larger" }}> {book.name} </div>
+              <div style={{ fontSize: "smaller" }}> {book.rating} </div>
+            </li>
+          ))}
+        </ul> */}
+
+      <div className="book-list">
+        <ul>
+          {bookshelf[genre].map((book) => (
+            <li key={book.name}>{book.name}</li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }
